@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Linklet — URL Shortener</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <div class="brand-mark" aria-hidden="true">↗</div>
+      <p class="eyebrow">A simpler way to share</p>
+      <h1>Make links <span>shorter.</span></h1>
+      <p class="intro">Paste a long URL below and get a short link you can share anywhere.</p>
+
+      <form id="shorten-form">
+        <label for="url">Your long URL</label>
+        <div class="input-row">
+          <input id="url" name="url" type="url" placeholder="https://example.com/your/very/long/link" required>
+          <button id="submit-button" type="submit">Shorten link</button>
+        </div>
+      </form>
+
+      <section id="result" class="result" aria-live="polite" hidden>
+        <p class="result-label">Your short link is ready</p>
+        <div class="result-row">
+          <a id="short-url" target="_blank" rel="noopener noreferrer"></a>
+          <button id="copy-button" class="copy-button" type="button">Copy</button>
+        </div>
+      </section>
+      <p id="message" class="message" role="status"></p>
+      <p class="footer">Your links are saved so they keep working.</p>
+    </main>
+  </body>
+</html>
